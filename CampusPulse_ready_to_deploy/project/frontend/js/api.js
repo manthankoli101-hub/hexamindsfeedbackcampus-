@@ -2,7 +2,7 @@
 // local backend. Once you deploy the backend (e.g. to Render), replace the
 // string below with your live backend URL, e.g.:
 //   const DEPLOYED_API_BASE = "https://campusfeedback-backend.onrender.com/api";
-const DEPLOYED_API_BASE = "https://hexamindsfeedbackcampus.onrender.com"; // <-- paste your deployed backend URL + "/api" here
+const DEPLOYED_API_BASE = "https://hexamindsfeedbackcampus.onrender.com/api"; // <-- paste your deployed backend URL + "/api" here
 
 const API_BASE =
   DEPLOYED_API_BASE ||
