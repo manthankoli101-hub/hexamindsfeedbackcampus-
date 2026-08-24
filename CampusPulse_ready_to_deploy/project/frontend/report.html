@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFeedback — Report Issue</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="student-dashboard.html">Campus<span>Feedback</span></a>
+    <nav class="nav">
+      <a href="student-dashboard.html">Dashboard</a>
+      <a class="active" href="report.html">Report Issue</a>
+      <button class="btn btn-ghost" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero-row compact">
+      <div>
+        <p class="eyebrow">NEW REPORT</p>
+        <h2>Report a campus issue</h2>
+        <p class="muted">Describe the problem naturally. CampusFeedback will structure it for the administration.</p>
+      </div>
+    </section>
+
+    <div class="two-column">
+      <section class="panel">
+        <form id="reportForm" class="form">
+          <label for="description">Describe the issue</label>
+          <textarea id="description" rows="7" placeholder="Example: The water cooler near C Block is leaking..." required></textarea>
+
+          <label for="location">Location</label>
+          <select id="location" required></select>
+          <p class="muted small">Pick the spot on campus — it decides where your report's dot appears on the <a href="map.html">Severity Map</a>.</p>
+
+          <label>Severity</label>
+          <div id="severityGrid" class="severity-grid">
+            <button type="button" class="severity-option" data-value="1">
+              <strong>1</strong><span>Minor inconvenience</span>
+            </button>
+            <button type="button" class="severity-option selected" data-value="2">
+              <strong>2</strong><span>Service disruption</span>
+            </button>
+            <button type="button" class="severity-option" data-value="3">
+              <strong>3</strong><span>Major disruption</span>
+            </button>
+            <button type="button" class="severity-option" data-value="4">
+              <strong>4</strong><span>Immediate safety hazard</span>
+            </button>
+          </div>
+
+          <label for="photo">Optional image</label>
+          <input id="photo" type="file" accept="image/*">
+
+          <button id="submitBtn" class="btn btn-primary" type="submit">Analyze & Submit</button>
+          <p id="reportError" class="form-error"></p>
+        </form>
+      </section>
+
+      <aside class="panel info-panel">
+        <p class="eyebrow">WHAT HAPPENS NEXT</p>
+        <h3>CampusFeedback processing</h3>
+        <div class="process-list">
+          <div><span>01</span><p>AI extracts the issue category and department.</p></div>
+          <div><span>02</span><p>Related unresolved complaints are checked.</p></div>
+          <div><span>03</span><p>System calculates the operational priority.</p></div>
+          <div><span>04</span><p>Issue is routed to the right department.</p></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="resultModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="resultModalTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModal" aria-label="Close report result">×</button>
+      <p class="eyebrow">REPORT SUBMITTED</p>
+      <div id="resultContent"></div>
+      <div class="modal-actions">
+        <button type="button" class="btn btn-ghost" id="modalDone">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/locations.js"></script>
+  <script src="js/report.js"></script>
+</body>
+</html>

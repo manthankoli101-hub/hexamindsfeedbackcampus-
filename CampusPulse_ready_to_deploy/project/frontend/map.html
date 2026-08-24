@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFeedback — Severity Map</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <header class="topbar">
+    <a id="mapBrand" class="brand" href="student-dashboard.html">Campus<span>Feedback</span></a>
+    <nav class="nav">
+      <a id="mapDashboard" href="student-dashboard.html">Dashboard</a>
+      <a class="active" href="map.html">Severity Map</a>
+      <button class="btn btn-ghost" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero-row compact">
+      <div>
+        <p class="eyebrow">CAMPUS VISUALIZATION</p>
+        <h2>Severity map</h2>
+        <p class="muted">Live floorplan showing the most serious active issue reported at each location. A dot lights up the moment a complaint is submitted from that area.</p>
+      </div>
+    </section>
+
+    <section class="panel map-panel">
+      <div class="map-legend">
+        <span><i class="dot green"></i> Low</span>
+        <span><i class="dot yellow"></i> Moderate</span>
+        <span><i class="dot orange"></i> High</span>
+        <span><i class="dot red"></i> Hazardous</span>
+        <span><i class="dot grey"></i> No active reports</span>
+      </div>
+      <div id="floorMap" class="floor-map"></div>
+      <p id="mapError" class="form-error"></p>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/floorplan-image.js"></script>
+  <script src="js/locations.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

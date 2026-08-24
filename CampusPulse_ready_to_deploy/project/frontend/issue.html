@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFeedback — Issue Details</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="student-dashboard.html">Campus<span>Feedback</span></a>
+    <nav id="issueNav" class="nav">
+      <a id="issueNavDashboard" href="student-dashboard.html">Dashboard</a>
+      <a id="issueNavMap" href="map.html">Severity Map</a>
+      <a id="issueNavSecondary" href="report.html">Report Issue</a>
+      <button class="btn btn-ghost" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section id="issueHeader" class="hero-row">
+      <div>
+        <p class="eyebrow">ISSUE DETAILS</p>
+        <h2>Loading...</h2>
+      </div>
+    </section>
+
+    <div class="two-column">
+      <section class="panel">
+        <div id="issueDetails"></div>
+        <div id="issueReports" class="issue-reports hidden"></div>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">LIFECYCLE</p>
+        <h3>Issue progress</h3>
+        <div id="timeline" class="timeline"></div>
+        <div id="adminControls" class="admin-controls hidden"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/issue.js"></script>
+</body>
+</html>

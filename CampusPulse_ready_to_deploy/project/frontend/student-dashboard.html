@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFeedback — Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="student-dashboard.html">Campus<span>Feedback</span></a>
+    <nav class="nav">
+      <a class="active" href="student-dashboard.html">Dashboard</a>
+      <a href="map.html">Severity Map</a>
+      <a href="student-dashboard.html#reports">My Reports</a>
+      <button class="btn btn-ghost" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero-row">
+      <div>
+        <p class="eyebrow">STUDENT DASHBOARD</p>
+        <h2 id="studentGreeting">Welcome</h2>
+        <p class="muted">Report an issue and track what happens next.</p>
+      </div>
+      <a class="btn btn-primary" href="report.html">+ Report an Issue</a>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card"><span>Open issues</span><strong id="openCount">0</strong></article>
+      <article class="stat-card"><span>High priority</span><strong id="highCount">0</strong></article>
+      <article class="stat-card"><span>Resolved</span><strong id="resolvedCount">0</strong></article>
+    </section>
+
+    <section id="reports" class="panel">
+      <div class="panel-head">
+        <div>
+          <p class="eyebrow">MY REPORTS</p>
+          <h3>Recent complaints</h3>
+        </div>
+      </div>
+      <div id="issueList" class="issue-list">
+        <div class="empty-state">Loading reports...</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/student.js"></script>
+</body>
+</html>

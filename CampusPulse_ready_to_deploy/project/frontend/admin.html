@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusFeedback — Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="admin.html">Campus<span>Feedback</span></a>
+    <nav class="nav">
+      <a class="active" href="admin.html">Dashboard</a>
+      <a href="map.html">Severity Map</a>
+      <button class="btn btn-ghost" data-logout>Logout</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero-row">
+      <div>
+        <p class="eyebrow">ADMIN CONTROL CENTER</p>
+        <h2>Campus issue overview</h2>
+        <p class="muted">See what is happening across campus and prioritize action.</p>
+      </div>
+    </section>
+
+    <section class="stats-grid four">
+      <article class="stat-card"><span>Total issues</span><strong id="totalIssues">0</strong></article>
+      <article class="stat-card"><span>Open issues</span><strong id="openIssues">0</strong></article>
+      <article class="stat-card"><span>High priority</span><strong id="highIssues">0</strong></article>
+      <article class="stat-card danger-stat"><span>Hazardous</span><strong id="hazardIssues">0</strong></article>
+    </section>
+
+    <div class="admin-grid">
+      <section class="panel">
+        <div class="panel-head">
+          <div>
+            <p class="eyebrow">LIVE QUEUE</p>
+            <h3>Active issues</h3>
+          </div>
+        </div>
+        <div id="adminIssueList" class="issue-list">
+          <div class="empty-state">Loading...</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div>
+          <p class="eyebrow">DEPARTMENT WORKLOAD</p>
+          <h3>Open issues by department</h3>
+        </div>
+        <div id="departmentBars" class="bar-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth-guard.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

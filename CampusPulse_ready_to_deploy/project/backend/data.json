@@ -1,0 +1,48 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Demo Student",
+      "email": "student@gsmcoe.ac.in",
+      "role": "student"
+    },
+    {
+      "id": "a1",
+      "name": "Campus Admin",
+      "email": "admin@gsmcoe.ac.in",
+      "role": "admin"
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISS-102",
+      "title": "C-Block Water Cooler Leak",
+      "description": "The drinking water machine beside C Block is leaking.",
+      "location": "C Wing",
+      "severity": 4,
+      "baseSeverity": 2,
+      "priority": 4,
+      "category": "Water / Maintenance",
+      "department": "Maintenance",
+      "status": "In Progress",
+      "duplicateCount": 8,
+      "createdBy": "u1",
+      "createdAt": "2026-08-22T07:00:00.000Z"
+    },
+    {
+      "id": "ISS-103",
+      "title": "Projector Failure - Room 304",
+      "description": "The projector in classroom 304 is not working.",
+      "location": "C1",
+      "severity": 2,
+      "baseSeverity": 2,
+      "priority": 2,
+      "category": "Classroom Equipment",
+      "department": "IT / AV Support",
+      "status": "Assigned",
+      "duplicateCount": 2,
+      "createdBy": "u1",
+      "createdAt": "2026-08-22T07:30:00.000Z"
+    }
+  ]
+}
